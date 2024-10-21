@@ -1,25 +1,47 @@
+// TODO: Implement the password generation logic based on user input
+
 const generatePassword = (length, options) => {
-    const includeUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const includeLowercase = "abcdefghijklmnopqrstuvwxyz";
-    const includeNumbers = "0123456789";
-    const includeSpecialChars = "!@#$%^&*()";
-    
+    // Character sets for password generation
+    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowercase = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const specialChars = "!@#$%^&*()";
+
+    // TODO: Create a variable for the character set based on selected options
+     
     let charSet = "";
+    if (options.includeUppercase) charSet += uppercase;
+    if (options.includeLowercase) charSet += lowercase;
+    if (options.includeNumbers) charSet += numbers;
+    if (options.includeSpecialChars) charSet += specialChars;   
 
+    if (charSet.length === 0) {
+        return "No character set selected, please select at least one option.";
+    }
     // Build the character set based on selected options
-    if (options.includeUppercase) charSet += includeUppercase;
-    if (options.includeLowercase) charSet += includeLowercase;
-    if (options.includeNumbers) charSet += includeNumbers;
-    if (options.includeSpecialChars) charSet += includeSpecialChars;
-
-    if (charSet === "") {
-        return "Please select at least one option.";
-    }
-
-    let password = "";
+    
+    let pass = "";
     for (let i = 0; i < length; i++) {
-        password += charSet.charAt(Math.floor(Math.random() * charSet.length));
+        pass += charSet.charAt(Math.floor(Math.random() * charSet.length));
     }
 
-    return password;
+    return pass;
 };
+    
+ // Use value instead of textContent
+ document.getElementById('generateBtn').addEventListener('click', () => {
+    const length = parseInt(document.getElementById('length').value, 10);
+    const options = {
+        includeUppercase: document.getElementById('includeUppercase').checked,
+        includeLowercase: document.getElementById('includeLowercase').checked,
+        includeNumbers: document.getElementById('includeNumbers').checked,
+        includeSpecialChars: document.getElementById('includeSpecialChars').checked,
+    };
+    
+    const password = generatePassword(length, options);
+    document.getElementById('passwordOutput').value = password;
+});
+
+// BONUS: Implement the copy to clipboard functionality
+
+
