@@ -4,7 +4,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+<<<<<<< HEAD
     background-color: #e3eebc; 
+=======
+    background-color: #1b49; 
+>>>>>>> af2f235b910f7a696a6447bedb8150aaf0b70c26
 }
 
 .container {
