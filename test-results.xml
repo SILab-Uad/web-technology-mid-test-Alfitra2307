@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.006" tests="6" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-10-21T11:27:02" tests="0" time="0.000" failures="0">
+<testsuites name="Mocha Tests" time="0.005" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-10-21T11:39:44" tests="0" time="0.000" failures="0">
   </testsuite>
-  <testsuite name="Password Generator Tests" timestamp="2024-10-21T11:27:02" tests="6" file="C:\Users\lenovo\Downloads\web-technology-mid-test-Alfitra2307\web-technology-mid-test-Alfitra2307\test\test.js" time="0.005" failures="0">
+  <testsuite name="Password Generator Tests" timestamp="2024-10-21T11:39:44" tests="6" file="D:\UAD\SEM 3\PRAK TEKWEB\PRAKTIKUM_4\web-technology-mid-test-Alfitra2307\test\test.js" time="0.004" failures="0">
     <testcase name="Password Generator Tests should generate a password of the specified length" time="0.001" classname="should generate a password of the specified length">
     </testcase>
-    <testcase name="Password Generator Tests should contain uppercase letters if selected" time="0.001" classname="should contain uppercase letters if selected">
+    <testcase name="Password Generator Tests should contain uppercase letters if selected" time="0.000" classname="should contain uppercase letters if selected">
     </testcase>
     <testcase name="Password Generator Tests should contain lowercase letters if selected" time="0.000" classname="should contain lowercase letters if selected">
     </testcase>
