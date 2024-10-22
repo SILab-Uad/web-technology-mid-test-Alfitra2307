@@ -5,6 +5,7 @@ export const generatePassword = (length, options) => {
     const specialChars = "!@#$%^&*()";
 
     let characterSet = '';
+
     if (options.includeUppercase) characterSet += uppercase;
     if (options.includeLowercase) characterSet += lowercase;
     if (options.includeNumbers) characterSet += numbers;
@@ -20,5 +21,5 @@ export const generatePassword = (length, options) => {
         password += characterSet[randomIndex];
     }
 
-    return password;
+    return password; 
 };

@@ -1,5 +1,5 @@
     // Dont change anything in this file
-    import { generatePassword } from './script.js';
+    import * as scriptJs from './script.js';
     document.getElementById('generateBtn').addEventListener('click', () => {
         const length = parseInt(document.getElementById('length').value, 10);
         const options = {
@@ -10,7 +10,7 @@
         };
     
         try {
-            const password = generatePassword(length, options);
+            const password = scriptJs.generatePassword(length, options);
             document.getElementById('passwordOutput').value = password; 
         } catch (error) {
             alert(error.message); // Show the error message in an alert
